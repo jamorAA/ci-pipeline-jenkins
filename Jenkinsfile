@@ -27,6 +27,8 @@ pipeline {
             steps {
                 script {
                     buildImage 'jamoraa/demo-java-maven-app:3.0'
+                    dockerLogin()
+                    dockerPush 'jamoraa/demo-java-maven-app:3.0'
                 }
             }
         }
